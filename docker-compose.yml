@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  generator:
+    image: alpine:latest
+    volumes:
+      - ./test:/test
+      - logs:/logs
+    entrypoint: >
+      /bin/sh -c "
+      rm /logs/test.json || true;
+      while true;
+      do
+        cat /test/logs.json >> /logs/test.json
+        sleep 0.05
+      done;
+      exit 0;
+      "
+
+  fluent-bit-test:
+    # Working
+    #image: fluent/fluent-bit:2.0.14-debug
+    # Broken
+    image: fluent/fluent-bit:2.1.10-debug
+    volumes:
+      - logs:/logs
+      - ./config:/config
+      - ./valgrind:/valgrind
+    command:
+#      - valgrind
+#      - --tool=callgrind
+#      - --dump-instr=yes
+#      - --simulate-cache=yes
+#      - --collect-jumps=yes
+#      - --callgrind-out-file=/valgrind/callgrind.out
+      - /fluent-bit/bin/fluent-bit
+      - -c
+      - /config/fluent-bit.conf
+
+volumes:
+  logs:

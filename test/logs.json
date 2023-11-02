@@ -1,0 +1,29 @@
+{"log":"[2023-11-02 01:22:05,814] ERROR [AdminClient clientId=xxxxx] Connection to node 1005 (xxxxxxx) failed authentication due to: Failed to process post-handshake messages (org.apache.kafka.clients.NetworkClient:803)\n","stream":"stdout","time":"2023-11-02T01:22:05.814932309Z"}
+{"log":"[2023-11-02 01:22:05,814] INFO [Producer clientId=xxxxxx] Node 1003 disconnected. (org.apache.kafka.clients.NetworkClient:977)\n","stream":"stdout","time":"2023-11-02T01:22:05.81493291Z"}
+{"log":"[2023-11-02 01:22:05,814] INFO [AdminClient clientId=xxxxxx] Cancelled in-flight API_VERSIONS request with correlation id 1664211 due to node 1005 being disconnected (elapsed time since creation: 0ms, elapsed time since send: 0ms, request timeout: 3600000ms) (org.apache.kafka.clients.NetworkClient:344)\n","stream":"stdout","time":"2023-11-02T01:22:05.814933895Z"}
+{"log":"[2023-11-02 01:22:05,814] WARN [AdminClient clientId=xxxxxxx] Metadata update failed due to authentication error (org.apache.kafka.clients.admin.internals.AdminMetadataManager:232)\n","stream":"stdout","time":"2023-11-02T01:22:05.814934209Z"}
+{"log":"org.apache.kafka.common.errors.SslAuthenticationException: Failed to process post-handshake messages\n","stream":"stdout","time":"2023-11-02T01:22:05.814934493Z"}
+{"log":"Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown\n","stream":"stdout","time":"2023-11-02T01:22:05.814934804Z"}
+{"log":"\u0009at java.base/sun.security.ssl.Alert.createSSLException(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814936203Z"}
+{"log":"\u0009at java.base/sun.security.ssl.Alert.createSSLException(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814936769Z"}
+{"log":"\u0009at java.base/sun.security.ssl.TransportContext.fatal(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814937645Z"}
+{"log":"\u0009at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814938079Z"}
+{"log":"\u0009at java.base/sun.security.ssl.TransportContext.dispatch(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814938614Z"}
+{"log":"\u0009at java.base/sun.security.ssl.SSLTransport.decode(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814939032Z"}
+{"log":"\u0009at java.base/sun.security.ssl.SSLEngineImpl.decode(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814939968Z"}
+{"log":"\u0009at java.base/sun.security.ssl.SSLEngineImpl.readRecord(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814940549Z"}
+{"log":"\u0009at java.base/sun.security.ssl.SSLEngineImpl.unwrap(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.81494187Z"}
+{"log":"\u0009at java.base/sun.security.ssl.SSLEngineImpl.unwrap(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.81494249Z"}
+{"log":"\u0009at java.base/javax.net.ssl.SSLEngine.unwrap(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814943277Z"}
+{"log":"\u0009at org.apache.kafka.common.network.SslTransportLayer.read(SslTransportLayer.java:576)\n","stream":"stdout","time":"2023-11-02T01:22:05.814943561Z"}
+{"log":"\u0009at org.apache.kafka.common.network.NetworkReceive.readFrom(NetworkReceive.java:84)\n","stream":"stdout","time":"2023-11-02T01:22:05.814943909Z"}
+{"log":"\u0009at org.apache.kafka.common.network.KafkaChannel.receive(KafkaChannel.java:452)\n","stream":"stdout","time":"2023-11-02T01:22:05.814944316Z"}
+{"log":"\u0009at org.apache.kafka.common.network.KafkaChannel.read(KafkaChannel.java:402)\n","stream":"stdout","time":"2023-11-02T01:22:05.814944685Z"}
+{"log":"\u0009at org.apache.kafka.common.network.Selector.attemptRead(Selector.java:674)\n","stream":"stdout","time":"2023-11-02T01:22:05.814945101Z"}
+{"log":"\u0009at org.apache.kafka.common.network.Selector.pollSelectionKeys(Selector.java:576)\n","stream":"stdout","time":"2023-11-02T01:22:05.814945296Z"}
+{"log":"\u0009at org.apache.kafka.common.network.Selector.poll(Selector.java:481)\n","stream":"stdout","time":"2023-11-02T01:22:05.814945499Z"}
+{"log":"\u0009at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:571)\n","stream":"stdout","time":"2023-11-02T01:22:05.814945692Z"}
+{"log":"\u0009at org.apache.kafka.clients.admin.KafkaAdminClient$AdminClientRunnable.processRequests(KafkaAdminClient.java:1413)\n","stream":"stdout","time":"2023-11-02T01:22:05.814945927Z"}
+{"log":"\u0009at org.apache.kafka.clients.admin.KafkaAdminClient$AdminClientRunnable.run(KafkaAdminClient.java:1344)\n","stream":"stdout","time":"2023-11-02T01:22:05.814946333Z"}
+{"log":"\u0009at java.base/java.lang.Thread.run(Unknown Source)\n","stream":"stdout","time":"2023-11-02T01:22:05.814946544Z"}
+{"log":"[2023-11-02 01:22:05,814] ERROR [Producer clientId=xxxxxx] Connection to node 1003 (xxxxx) failed authentication due to: Failed to process post-handshake messages (org.apache.kafka.clients.NetworkClient:803)\n","stream":"stdout","time":"2023-11-02T01:22:05.814946844Z"}
